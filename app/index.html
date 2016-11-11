@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>My homework_js13-14</title>
+    <!-- jQuery -->
+    <!-- <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>-->
+    <script src="js/script.min.js"></script>
+    <!--template-->
+    <script src="js/tmpl.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+<body>
+
+  <script type="text/template" id="test-question">
+
+      <h3>Тест</h3>
+      <form>
+        <% for(var i = 0; i < data.length; i++) {%>
+      <div class="content-block-<%= i+1 %>">
+        <h2><%= data[i].question %></h2>
+
+        <label>
+          <input type="checkbox" id="<%= i+1 %>-variant" value="<%= data[i].answer1 %>">
+          <span><%= data[i].answer1 %></span>
+        </label>
+        <label>
+          <input type="checkbox" id="<%= i+1 %>-variant" value="<%= data[i].answer2 %>">
+          <span><%= data[i].answer2 %></span>
+        </label>
+        <label>
+          <input type="checkbox" id="<%= i+1 %>-variant" value="<%= data[i].answer3 %>">
+          <span><%= data[i].answer3 %></span>
+        </label>
+       </div>
+        <% }; %>
+        <input type="submit" value="Проверить результат" id="button-check">
+      </form>
+
+      <div id="modal_form">
+        <span id="modal_close">X</span>
+        <h3 id="passed">Тест успешно пройден))))</h3>
+        <h3 id="not_passed">Вы плохо знаете школьную историю(((((Попробуйте еще раз!</h3>
+      </div>
+      <div id="overlay"></div>
+
+  </script>
+
+
+</body>
+</html>
