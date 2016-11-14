@@ -41,12 +41,13 @@ input[type='submit'] {
 
 @keyframes modal {
   0%{
-    top: 0%;
+    top: 0;
   }
   50%{
     top: 50%;
   }
 }
+
 
 #modal_form {
   width: 400px;
@@ -123,5 +124,6 @@ input[type='submit'] {
   left: 0;
   cursor: pointer;
   display: none;
+  animation: opacity 2s;
   /*animation: overlay 2s cubic-bezier(0, 1.1, 0.8, 4);*/
 }

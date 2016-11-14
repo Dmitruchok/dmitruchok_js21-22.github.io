@@ -70,16 +70,13 @@ button_check.onclick = () => {
   });
 
   if ( right.length === returnRight.length ) {//сравниваем длину масивов и выводим модальное окно.+
-    setInterval(function () {
       overlay.style.display = 'block';
       modalForm.style.cssText = 'display: block; opacity: 1; top: 50%;';
       passedWindow.style.display = 'block';
       modalClose.style.color = '#000';
-    }, 200);
 
   } else {
     overlay.style.display = 'block';
-
     modalForm.style.cssText = 'display: block; opacity: 1; top: 50%;';
     notPassed.style.display = 'block';
   }
