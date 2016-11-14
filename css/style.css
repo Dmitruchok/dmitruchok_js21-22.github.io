@@ -39,6 +39,15 @@ input[type='submit'] {
     border: 2px solid #000;
 }
 
+@keyframes modal {
+  0%{
+    top: 0%;
+  }
+  50%{
+    top: 50%;
+  }
+}
+
 #modal_form {
   width: 400px;
   height: 300px;
@@ -54,7 +63,9 @@ input[type='submit'] {
   opacity: 0;
   z-index:5;
   padding: 20px 20px;
+  animation: modal 1s;
 }
+
 
 #modal_close {
   display: flex;
@@ -93,6 +104,14 @@ input[type='submit'] {
   background: #000;
 }
 
+
+/*@keyframes overlay {
+  to {
+    transform:rotate(300deg);
+  }
+}
+*/
+
 #overlay {
   z-index: 2;
   position: fixed;
@@ -104,4 +123,5 @@ input[type='submit'] {
   left: 0;
   cursor: pointer;
   display: none;
+  /*animation: overlay 2s cubic-bezier(0, 1.1, 0.8, 4);*/
 }
